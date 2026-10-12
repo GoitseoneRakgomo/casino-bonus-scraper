@@ -29,16 +29,16 @@ Open `index.html` through a local static server (for example, `py -m http.server
 
 ## Deploy to Vercel
 
-This is a static site; no build step, Node.js dependency, server-side function, or Vercel environment variable is needed. `vercel.json` sets the repository root as the output directory and adds basic security headers. `.vercelignore` excludes the local environment and Python cache files; keep `.env` out of Git and Vercel.
+This is a static site; no build step, Node.js dependency, server-side function, or Vercel environment variable is needed. `vercel.json` explicitly selects no framework, sets the repository root as the output directory, and adds basic security headers. `.vercelignore` excludes the local environment and Python cache files; keep `.env` out of Git and Vercel.
 
 1. Push this repository to GitHub, GitLab, or Bitbucket. Include `index.html`, `styles.css`, `script.js`, `bonuses.json`, and `vercel.json`.
-2. In Vercel, choose **Add New → Project**, import that repository, set the **Root Directory** to `.`, and select **Other** as the Framework Preset.
+2. In Vercel, choose **Add New → Project**, import that repository, set the **Root Directory** to `.`, and select **Other** as the Framework Preset. If the project was already imported as Python, change **Settings → Build and Deployment → Framework Preset** to **Other** and save.
 3. Leave the **Build Command** empty and set **Output Directory** to `.`. Deploy.
 4. Open the resulting `https://<project>.vercel.app` URL and confirm the table displays three casinos and working source links.
 
 Alternatively, with the Vercel CLI installed and authenticated, run `vercel` from the repository root, link/create the project when prompted, and deploy production with `vercel --prod`.
 
-The scraper runs on your own computer, not on Vercel. Generate and commit the desired `bonuses.json` before deploying; never put `GEMINI_API_KEY` in Vercel settings or the repository. To update the displayed data, run the scraper locally and redeploy the changed JSON. Vercel deployment is not yet live because this repository has no configured Git remote or linked Vercel project.
+The scraper runs on your own computer, not on Vercel. Generate and commit the desired `bonuses.json` before deploying; never put `GEMINI_API_KEY` in Vercel settings or the repository. To update the displayed data, run the scraper locally and redeploy the changed JSON. If Vercel reports "No python entrypoint found", it is still using its Python framework preset: set **Framework Preset** to **Other** as above, then redeploy. Vercel deployment is not yet live because this repository has no configured Git remote or linked Vercel project.
 
 ## Production note
 
