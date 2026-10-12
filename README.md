@@ -25,12 +25,25 @@ The public source currently labels its comparison data as verified in March 2026
 
 ## Web page
 
-Open `index.html` through a local static server (for example, `py -m http.server 8000`) and visit `http://localhost:8000`. It reads `bonuses.json` in the same folder and is suitable for the root of a GitHub Pages repository; commit the JSON output along with the page to publish the data.
+Open `index.html` through a local static server (for example, `py -m http.server 8000`) and visit `http://localhost:8000`. It reads `bonuses.json` in the same folder.
+
+## Deploy to Vercel
+
+This is a static site; no build step, Node.js dependency, server-side function, or Vercel environment variable is needed. `vercel.json` sets the repository root as the output directory and adds basic security headers. `.vercelignore` excludes the local environment and Python cache files; keep `.env` out of Git and Vercel.
+
+1. Push this repository to GitHub, GitLab, or Bitbucket. Include `index.html`, `styles.css`, `script.js`, `bonuses.json`, and `vercel.json`.
+2. In Vercel, choose **Add New → Project**, import that repository, set the **Root Directory** to `.`, and select **Other** as the Framework Preset.
+3. Leave the **Build Command** empty and set **Output Directory** to `.`. Deploy.
+4. Open the resulting `https://<project>.vercel.app` URL and confirm the table displays three casinos and working source links.
+
+Alternatively, with the Vercel CLI installed and authenticated, run `vercel` from the repository root, link/create the project when prompted, and deploy production with `vercel --prod`.
+
+The scraper runs on your own computer, not on Vercel. Generate and commit the desired `bonuses.json` before deploying; never put `GEMINI_API_KEY` in Vercel settings or the repository. To update the displayed data, run the scraper locally and redeploy the changed JSON. Vercel deployment is not yet live because this repository has no configured Git remote or linked Vercel project.
 
 ## Production note
 
-See [production-plan.md](production-plan.md) for the proposed daily 200-casino deployment, storage, monitoring and cost estimate. The page is not published yet; deployment requires a hosting account and a repository remote.
+See [production-plan.md](production-plan.md) for the proposed daily 200-casino deployment, storage, monitoring and cost estimate.
 
 ## Submission status
 
-`bonuses.json` has been generated from the live source and Gemini's free-tier API on 2026-10-12; values were scraped and model-structured, not typed in by hand. The live page remains unpublished: this repository has no configured remote, so publish the page files and JSON to your chosen free static host. The API key is only in the local ignored `.env` file and must not be committed.
+`bonuses.json` has been generated from the live source and Gemini's free-tier API on 2026-10-12. The static page is prepared for Vercel but is not deployed: this repository has no configured Git remote or linked Vercel project. The API key is only in the ignored local `.env` file; do not add it to Vercel or commit it.
