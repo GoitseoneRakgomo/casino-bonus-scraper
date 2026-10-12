@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17211f;
+  background: #f3f6f4;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(2rem, 7vw, 5rem) 0 2rem;
+}
+
+.page-header {
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #087f5b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 1rem 0 0;
+  color: #52615c;
+  line-height: 1.6;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #dce5e0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(23 33 31 / 6%);
+}
+
+.table-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.updated-at {
+  margin: 0;
+  color: #64736d;
+  font-size: 0.85rem;
+}
+
+.status {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  color: #52615c;
+}
+
+.status:empty {
+  display: none;
+}
+
+.status.error {
+  color: #a61e2d;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.9rem 0.75rem;
+  border-bottom: 1px solid #e6ece8;
+  vertical-align: top;
+}
+
+th {
+  color: #52615c;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+td:first-child {
+  min-width: 10rem;
+  font-weight: 700;
+}
+
+td:nth-child(2) {
+  min-width: 13rem;
+}
+
+td:nth-child(3) {
+  min-width: 11rem;
+}
+
+td:nth-child(4) {
+  min-width: 9rem;
+  white-space: nowrap;
+}
+
+td:last-child {
+  min-width: 6rem;
+}
+
+a {
+  color: #087f5b;
+  text-underline-offset: 0.2em;
+}
+
+footer {
+  margin-top: 1.25rem;
+  color: #64736d;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: min(100% - 1rem, 1100px);
+    padding-top: 2rem;
+  }
+
+  .table-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-inline: 1rem;
+  }
+
+  .status {
+    padding-inline: 1rem;
+  }
+
+  .table-scroll {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  table {
+    min-width: 720px;
+    font-size: 0.9rem;
+  }
+}

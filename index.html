@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A comparison of welcome bonuses, wagering requirements and minimum deposits for three casinos.">
+    <title>Casino bonus comparison</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="page-header">
+        <p class="eyebrow">Bonus comparison</p>
+        <h1>Casino welcome bonuses</h1>
+        <p class="intro">Three offers compared from one public source. Check the source terms before signing up; offers can change.</p>
+      </header>
+
+      <section class="card" aria-labelledby="comparison-heading">
+        <div class="table-heading">
+          <h2 id="comparison-heading">Current comparison</h2>
+          <p id="updated-at" class="updated-at"></p>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">Loading bonus data…</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Casino</th>
+                <th scope="col">Welcome bonus</th>
+                <th scope="col">Wagering requirement</th>
+                <th scope="col">Minimum deposit</th>
+                <th scope="col">Source</th>
+              </tr>
+            </thead>
+            <tbody id="casino-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <p>18+ only. Gambling involves risk. This page is informational and does not endorse any casino.</p>
+      </footer>
+    </main>
+  </body>
+</html>

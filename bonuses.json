@@ -1,0 +1,43 @@
+{
+  "source_url": "https://betproof.co.za/casino-bonuses-south-africa/",
+  "scraped_at": "2026-10-12T08:07:23.328335+00:00",
+  "count": 3,
+  "casinos": [
+    {
+      "casino": "Hollywoodbets",
+      "welcome_bonus": "R25 sign-up + 50 free spins",
+      "wagering_requirement": "1x sports / 10x spins",
+      "minimum_deposit": "R10",
+      "source_url": "https://betproof.co.za/casino-bonuses-south-africa/",
+      "raw_terms": {
+        "bonus": "R25 sign-up + 50 free spins",
+        "wagering": "1x sports / 10x spins",
+        "minimum_deposit": "R10"
+      }
+    },
+    {
+      "casino": "Betway South Africa",
+      "welcome_bonus": "R1,000 sports (3x) + R2,000 casino (30x)",
+      "wagering_requirement": "3x sports / 30x casino",
+      "minimum_deposit": "R5",
+      "source_url": "https://betproof.co.za/casino-bonuses-south-africa/",
+      "raw_terms": {
+        "bonus": "R1,000 sports (3x) + R2,000 casino (30x)",
+        "wagering": "3x sports / 30x casino",
+        "minimum_deposit": "R5"
+      }
+    },
+    {
+      "casino": "PlayaBets",
+      "welcome_bonus": "100% up to R3,000",
+      "wagering_requirement": "6x",
+      "minimum_deposit": "R10",
+      "source_url": "https://betproof.co.za/casino-bonuses-south-africa/",
+      "raw_terms": {
+        "bonus": "100% up to R3,000",
+        "wagering": "6x",
+        "minimum_deposit": "R10"
+      }
+    }
+  ]
+}
